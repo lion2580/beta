@@ -1,0 +1,148 @@
+/* ====== Paleta Delta x Marcus (mezcla) ====== */
+:root{
+    --bg: #0a0a0c;
+    --panel: #111317;
+    --metal: #1c1f25;
+    --text: #e7e7e7;
+    --muted: #9ea1a8;
+    --accent-blue: #3b8dff;
+    --accent-steel: #6d6d6d;
+    --crimson: #d60000;
+    --card: linear-gradient(160deg, rgba(55,55,55,0.12), rgba(0,0,0,0.18));
+}
+
+/* RESET BASE */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+    margin:0;
+    font-family: Inter, "Segoe UI", Arial, sans-serif;
+    background: radial-gradient(1200px 800px at 10% 10%, rgba(59,141,255,0.02), transparent),
+                var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    line-height:1.45;
+}
+
+/* CONTENEDOR */
+.container{max-width:1100px;margin:0 auto;padding:18px}
+
+/* TOPBAR */
+.topbar{
+    background: linear-gradient(180deg, #050505 0%, #0f0f0f 100%);
+    border-bottom:2px solid rgba(59,141,255,0.08);
+    position:sticky;top:0;z-index:40;
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:10px 0}
+.brand{display:flex;align-items:center;gap:14px}
+.logo-img{width:84px;height:auto;margin-right:8px;filter:drop-shadow(0 6px 18px rgba(0,0,0,0.6)) saturate(0.95)}
+.brand h1{margin:0;font-size:1.15rem;letter-spacing:0.6px;color:var(--text);text-transform:uppercase;font-weight:800}
+.tag{margin:2px 0 0;color:var(--muted);font-size:0.82rem}
+
+/* header controls */
+.header-controls{display:flex;align-items:center;gap:12px}
+.user-area{display:flex;align-items:center;gap:8px}
+.username{color:var(--muted);font-size:0.95rem}
+
+/* NAV */
+.nav{display:flex;gap:12px;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;font-size:0.95rem;padding:8px 10px;border-radius:8px;transition:all .18s}
+.nav a:hover{color:var(--text);background:rgba(255,255,255,0.02)}
+
+/* HERO */
+.hero{padding:36px 0 18px}
+.hero-grid{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:start}
+.hero-text h2{font-size:1.9rem;margin:0 0 10px;color:var(--text)}
+.hero-text p{color:var(--muted);margin:0 0 14px}
+.hero-features{list-style:none;padding:0;margin:0;color:var(--muted)}
+.hero-features li{margin:6px 0;padding-left:16px;position:relative}
+.hero-features li::before{content:"";position:absolute;left:0;top:8px;width:8px;height:8px;border-radius:2px;background:var(--accent-blue)}
+
+/* HERO CARD */
+.hero-card{background:var(--panel);border:1px solid rgba(255,255,255,0.03);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+.hero-card h3{margin:0 0 6px}
+.hero-card p.small{color:var(--muted);font-size:0.95rem;margin:0 0 12px}
+
+/* BOTONES */
+.btn{display:inline-block;padding:10px 14px;border-radius:8px;border:none;background:transparent;color:var(--text);cursor:pointer;text-decoration:none;transition:all .18s;font-size:0.95rem}
+.btn.primary{background:linear-gradient(90deg,var(--accent-blue),#225fcc);color:#fff;font-weight:700;box-shadow:0 6px 18px rgba(59,141,255,0.12)}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted)}
+.btn.small{padding:6px 10px;font-size:0.85rem;border-radius:7px}
+.btn:hover{transform:translateY(-2px)}
+
+/* SECCIONES */
+.intro, .formulario, .cards-section{margin:28px auto;background:var(--card);border:1px solid rgba(255,255,255,0.03);padding:20px;border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+.intro h2, .formulario h2, .cards-section h2{margin-top:0;color:var(--text)}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.04));border-radius:10px;padding:16px;border:1px solid rgba(255,255,255,0.02);box-shadow:0 8px 18px rgba(0,0,0,0.55)}
+.card h3{margin:0 0 6px}
+.card p{color:var(--muted);margin:0 0 8px}
+
+/* FORMULARIO */
+form{display:block}
+.row{display:flex;gap:14px;flex-wrap:wrap}
+.field{flex:1;min-width:220px;display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.field.small{max-width:200px}
+label{font-size:0.9rem;color:var(--muted)}
+input[type="text"], input[type="number"], input[type="date"], input[type="time"], select, textarea{
+    padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);
+    background:linear-gradient(120deg,#0b0b0b,#141416);color:var(--text);outline:none;font-size:0.95rem;
+}
+
+/* ===== SELECTS: estilo Delta+Marcus, resaltado y glow ===== */
+select{
+    padding:12px;
+    font-size:1rem;
+    border:2px solid var(--accent-steel);
+    border-radius:10px;
+    background: linear-gradient(145deg,#090909,#121212);
+    color:var(--text);
+    font-weight:700;
+    cursor:pointer;
+    transition:all .18s;
+    box-shadow:0 0 8px rgba(59,141,255,0.06);
+}
+
+/* focus & hover */
+select:hover{border-color:var(--accent-blue);box-shadow:0 0 12px rgba(59,141,255,0.18)}
+select:focus{outline:none;border-color:var(--accent-blue);box-shadow:0 0 14px rgba(59,141,255,0.28)}
+
+/* opciones internas (soporte parcial según navegador) */
+select option{background:#0d0d0d;color:#fff;padding:10px;font-weight:600}
+select option:hover{background:rgba(59,141,255,0.14);color:#fff}
+
+/* textarea */
+textarea{resize:vertical;min-height:92px}
+
+/* MAPA */
+.map-container{margin-top:12px;border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,0.03);box-shadow:0 6px 16px rgba(0,0,0,0.6);height:280px;display:none}
+.map-container iframe{width:100%;height:100%;border:0}
+
+/* PRICE BOX */
+.price-box{margin-top:12px;background:linear-gradient(160deg, rgba(59,141,255,0.03), rgba(0,0,0,0.04));border:1px solid rgba(255,255,255,0.03);padding:12px;border-radius:10px;display:flex;justify-content:space-between;align-items:center}
+.price{font-size:1.25rem;color:var(--accent-blue);font-weight:800}
+.price-actions{display:flex;gap:8px}
+
+/* MENSAJE */
+.exito{display:none;margin-top:16px;padding:14px;border-radius:8px;border-left:4px solid var(--accent-blue);background:linear-gradient(90deg, rgba(59,141,255,0.06), rgba(59,141,255,0.02));color:var(--text)}
+
+/* FAQ */
+.faq details{background:rgba(255,255,255,0.02);padding:14px;border-radius:8px;margin:10px 0;border:1px solid rgba(255,255,255,0.02)}
+.faq summary{cursor:pointer;outline:none;color:var(--text)}
+
+/* MODAL */
+.modal{position:fixed;left:0;top:0;right:0;bottom:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);z-index:200;padding:20px;visibility:hidden;opacity:0;transition:all .18s}
+.modal[aria-hidden="false"]{visibility:visible;opacity:1}
+.modal-content{width:420px;max-width:100%;background:var(--panel);border-radius:12px;padding:18px;border:1px solid rgba(255,255,255,0.03);box-shadow:0 12px 40px rgba(0,0,0,0.7)}
+.modal-content h3{margin:0 0 8px}.modal-content .muted{color:var(--muted);font-size:0.9rem}
+
+/* FOOTER */
+.footer{margin-top:28px;padding:22px 0;border-top:1px solid rgba(255,255,255,0.02)}
+.footer-grid{display:flex;justify-content:space-between;gap:20px;color:var(--muted)}
+
+/* RESPONSIVE */
+@media (max-width:980px){.hero-grid{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.nav{display:none}.header-inner{flex-direction:column;align-items:flex-start;gap:8px}}
+@media (max-width:640px){.cards{grid-template-columns:1fr}.cards-section,.intro,.formulario{padding:16px}.hero-text h2{font-size:1.4rem}.header-inner{padding:10px}.logo-img{width:64px}}
