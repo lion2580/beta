@@ -1,0 +1,37 @@
+[
+  {
+    "nombre": "Juan Leon",
+    "motivo": "Viaje",
+    "ciudad": "Cartagena",
+    "dia": "2025-11-29",
+    "hora": "12:52",
+    "pais": "Colombia"
+  },
+  {
+    "nombre": "Juan Leon",
+    "motivo": "evento",
+    "ciudad": "Pasto",
+    "pais": "Colombia",
+    "dia": "2025-11-29",
+    "hora": "15:03",
+    "detalle": "si"
+  },
+  {
+    "nombre": "j",
+    "motivo": "k",
+    "ciudad": "Villavicencio",
+    "pais": "Colombia",
+    "dia": "2025-11-10",
+    "hora": "13:18",
+    "detalle": "ju"
+  },
+  {
+    "nombre": "j",
+    "motivo": "k",
+    "ciudad": "Villavicencio",
+    "pais": "Colombia",
+    "dia": "2025-11-10",
+    "hora": "13:18",
+    "detalle": "ju"
+  }
+]

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Comandos VIP - Solicitud</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="topbar">
+        <div class="container header-inner">
+            <div class="brand">
+                <img src="logo.jpg" class="logo-img" alt="Comandos VIP Logo">
+                <div>
+                    <h1>COMANDOS VIP</h1>
+                    <p class="tag">Protección ejecutiva • Análisis de riesgo • Confidencialidad</p>
+                </div>
+            </div>
+
+            <div class="header-controls">
+                <div id="userArea" class="user-area">
+                    <span id="usernameDisplay" class="username">Invitado</span>
+                    <button id="loginBtn" class="btn ghost small">Iniciar sesión</button>
+                </div>
+                <nav class="nav">
+                    <a href="#servicios">Servicios</a>
+                    <a href="#recomendaciones">Recomendaciones</a>
+                    <a href="#formulario">Solicitud</a>
+                    <a href="#faq">FAQ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- LOGIN MODAL -->
+    <div id="loginModal" class="modal" aria-hidden="true">
+        <div class="modal-content">
+            <h3>Iniciar sesión</h3>
+            <p class="muted">Sesión local (mock). Tus datos se guardan en este navegador.</p>
+            <label for="loginUser">Usuario</label>
+            <input id="loginUser" type="text" placeholder="Nombre de usuario" />
+            <label for="loginPass">Contraseña</label>
+            <input id="loginPass" type="password" placeholder="Contraseña (demo)" />
+            <div class="modal-actions">
+                <button id="doLogin" class="btn primary">Entrar</button>
+                <button id="closeLogin" class="btn ghost">Cancelar</button>
+            </div>
+            <div id="loginMessage" class="muted" style="margin-top:8px"></div>
+        </div>
+    </div>
+
+    <main>
+        <!-- HERO -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <h2>Seguridad discreta, acción precisa</h2>
+                    <p>Equipos entrenados para acompañamiento y protección en entornos urbanos y eventos. Protocolos actualizados, respuesta profesional y asesoría previa al operativo.</p>
+                    <ul class="hero-features">
+                        <li>Evaluación de riesgo previa</li>
+                        <li>Escoltas profesionales certificados</li>
+                        <li>Planes operativos adaptados</li>
+                    </ul>
+                </div>
+                <div class="hero-card">
+                    <h3>Solicita protección</h3>
+                    <p class="small">Rellena el formulario para que evaluemos tu requerimiento. Respondemos rápido.</p>
+                    <a class="btn" href="#formulario">Abrir formulario</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTIONS -->
+        <section id="servicios" class="section container cards-section">
+            <h2>Servicios Disponibles</h2>
+            <div class="cards">
+                <article class="card">
+                    <h3>Acompañamiento preventivo</h3>
+                    <p>Protección durante desplazamientos urbanos y traslados a reuniones o eventos.</p>
+                </article>
+                <article class="card">
+                    <h3>Protección ejecutiva</h3>
+                    <p>Equipos especializados para clientes con perfil de riesgo o actividades corporativas.</p>
+                </article>
+                <article class="card">
+                    <h3>Supervisión en eventos</h3>
+                    <p>Cobertura en actividades sociales o corporativas con control de accesos y vigilancia.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="recomendaciones" class="intro container">
+            <h2>Recomendaciones de seguridad</h2>
+            <p>Proporciona la mayor cantidad de información posible. Esto facilita la asignación y reduce el tiempo de respuesta.</p>
+            <ul class="recommendations">
+                <li>Dirección completa y punto de encuentro claro.</li>
+                <li>Duración estimada y motivo.</li>
+                <li>Datos de vehículo y personas acompañantes.</li>
+                <li>Contacto de emergencia.</li>
+            </ul>
+        </section>
+
+        <!-- FORMULARIO AMPLIADO -->
+        <section id="formulario" class="formulario container">
+            <h2>Registrar Solicitud</h2>
+
+            <!-- *** FORMULARIO CON FORMSpree *** -->
+            <form id="solicitudForm" autocomplete="off" action="https://formspree.io/f/mrbnkypq" method="POST">
+
+                <div class="row">
+                    <div class="field">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej: Ana Martínez" />
+                    </div>
+
+                    <div class="field">
+                        <label for="motivo">Motivo</label>
+                        <input type="text" id="motivo" name="motivo" placeholder="Ej: Reunión, traslado, evento" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label for="ciudad">Ubicación (Ciudad)</label>
+                        <select id="ciudad" name="ciudad">
+                            <option value="">Selecciona una ciudad</option>
+                        </select>
+                    </div>
+
+                    <div class="field small">
+                        <label for="dia">Día del encuentro</label>
+                        <input type="date" id="dia" name="fecha" />
+                    </div>
+
+                    <div class="field small">
+                        <label for="hora">Hora estimada</label>
+                        <input type="time" id="hora" name="hora" />
+                    </div>
+                </div>
+
+                <!-- nuevos campos -->
+                <div class="row">
+                    <div class="field">
+                        <label for="urgencia">Nivel de urgencia</label>
+                        <select id="urgencia" name="urgencia">
+                            <option value="low">Baja</option>
+                            <option value="medium" selected>Media</option>
+                            <option value="high">Alta</option>
+                            <option value="immediate">Inmediata</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="amenaza">Nivel de amenaza</label>
+                        <select id="amenaza" name="amenaza">
+                            <option value="low">Baja</option>
+                            <option value="medium" selected>Media</option>
+                            <option value="high">Alta</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="armado">¿Posible presencia de armas?</label>
+                        <select id="armado" name="armado">
+                            <option value="no" selected>No</option>
+                            <option value="unknown">Desconocido</option>
+                            <option value="yes">Sí (posible)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="field">
+                        <label for="vehiculo">Tipo de vehículo del cliente</label>
+                        <select id="vehiculo" name="vehiculo">
+                            <option value="none" selected>Sin vehículo</option>
+                            <option value="sedan">Sedán</option>
+                            <option value="suv">SUV</option>
+                            <option value="armored_van">Camioneta blindada</option>
+                            <option value="van">Van / Comercial</option>
+                        </select>
+                    </div>
+
+                    <div class="field">
+                        <label for="personas">Personas a proteger (cantidad)</label>
+                        <input type="number" id="personas" name="personas" min="1" value="1" />
+                    </div>
+
+                    <div class="field">
+                        <label for="duracion">Duración estimada (horas)</label>
+                        <input type="number" id="duracion" name="duracion" min="1" value="1" />
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label for="direccion">Dirección (escrita)</label>
+                    <input type="text" id="direccion" name="direccion" placeholder="Calle 123 #45-67, Bogotá" />
+                    <div class="map-actions">
+                        <button type="button" id="showMap" class="btn ghost small">Mostrar mapa</button>
+                        <button type="button" id="clearMap" class="btn ghost small">Limpiar mapa</button>
+                    </div>
+                </div>
+
+                <div id="mapContainer" class="map-container" aria-hidden="true">
+                    <iframe id="mapFrame" src="" frameborder="0" allowfullscreen></iframe>
+                </div>
+
+                <!-- precio -->
+                <div class="price-box">
+                    <div>
+                        <strong>Precio estimado:</strong>
+                        <div id="priceDisplay" class="price">Calculando...</div>
+                    </div>
+                    <div class="price-actions">
+                        <button type="button" id="recalcPrice" class="btn ghost small">Recalcular precio</button>
+                        <button type="button" id="estimatePDF" class="btn ghost small">Exportar estimado</button>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn primary">Enviar solicitud</button>
+                    <button type="button" id="resetBtn" class="btn ghost">Limpiar</button>
+                </div>
+            </form>
+
+            <div id="respuesta" class="exito" role="status" aria-live="polite"></div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="container faq">
+            <h2>Preguntas frecuentes</h2>
+            <details>
+                <summary>¿Con cuánta anticipación debo solicitar el servicio?</summary>
+                <p>Recomendamos mínimo 24-48 horas para evaluar riesgos y confirmar disponibilidad, aunque atendemos solicitudes urgentes según recursos.</p>
+            </details>
+
+            <details>
+                <summary>¿Los escoltas están certificados?</summary>
+                <p>Sí. Todo el personal tiene formación en seguridad, primeros auxilios y protocolos de reacción; además, verificación de antecedentes y acreditaciones internas.</p>
+            </details>
+
+            <details>
+                <summary>¿Qué información debo proporcionar siempre?</summary>
+                <p>Nombre completo, motivo, ciudad, fecha, hora y puntos de encuentro. Datos extra mejoran la asignación.</p>
+            </details>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <strong>Escolta Profesional</strong>
+                <p>Protección confiable y discreta — © 2025</p>
+            </div>
+            <div>
+                <strong>Contacto</strong>
+                <p>info@escoltaprofesional.co</p>
+                <p>Tel: +57 300 000 0000</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js" defer></script>
+    <script src="app.js"></script>
+</body>
+</html>
