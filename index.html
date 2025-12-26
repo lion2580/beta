@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comandos VIP - Solicitud</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<header class="topbar" role="banner">
+  <div class="container header-inner">
+
+    <!-- Marca -->
+    <div class="brand">
+      <img src="logo.jpg" class="logo-img" alt="Logo Comandos VIP">
+      <div class="brand-text">
+        <h1>COMANDOS VIP</h1>
+        <p class="tag">
+          Protección ejecutiva • Evaluación de riesgo • Confidencialidad
+        </p>
+      </div>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="nav header-controls" aria-label="Menú principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#recomendaciones">Recomendaciones</a>
+      <a href="#formulario">Solicitud</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="container">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-grid">
+
+      <div class="hero-text">
+        <h2>Protección estratégica para entornos de riesgo</h2>
+
+        <p class="hero-lead">
+          Ayudamos a personas y organizaciones a operar con tranquilidad,
+          mediante protección ejecutiva discreta, evaluación de riesgos y
+          protocolos profesionales adaptados a cada entorno.
+        </p>
+
+        <ul class="hero-features">
+          <li>Evaluación profesional del entorno y nivel de amenaza</li>
+          <li>Escoltas entrenados en protocolos reales de protección</li>
+          <li>Planes operativos adaptados a cada contexto</li>
+        </ul>
+      </div>
+
+      <aside class="hero-card" aria-labelledby="solicitaTitulo">
+        <h3 id="solicitaTitulo">Solicitud de evaluación</h3>
+        <p class="small">
+          Completa el formulario y realizamos una evaluación inicial
+          confidencial y sin compromiso.
+        </p>
+
+        <a href="#formulario" class="btn primary">
+          Solicitar evaluación
+        </a>
+      </aside>
+
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section id="servicios" class="cards-section">
+    <h2>Servicios disponibles</h2>
+
+    <div class="cards">
+      <article class="card">
+        <h3>Acompañamiento preventivo</h3>
+        <p>
+          Protección durante desplazamientos urbanos y traslados a reuniones
+          o eventos.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Protección ejecutiva</h3>
+        <p>
+          Equipos especializados para clientes con perfil de riesgo o
+          actividades corporativas.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>Supervisión en eventos</h3>
+        <p>
+          Cobertura en actividades sociales o corporativas con control de
+          accesos y vigilancia.
+        </p>
+      </article>
+    </div>
+  </section>
+
+ <!-- Recomendaciones -->
+<section id="recomendaciones">
+  <div class="card">
+
+    <h2>Recomendaciones de seguridad</h2>
+
+    <p class="help">
+      La información proporcionada permite evaluar el nivel de riesgo,
+      planificar rutas seguras y asignar el equipo adecuado.
+    </p>
+
+    <details>
+      <summary>
+        Información recomendada para una evaluación completa
+      </summary>
+
+      <p class="rec-intro">
+        Para una evaluación precisa, considera incluir los siguientes datos:
+      </p>
+
+      <ul class="rec-list">
+        <li>
+          <span class="rec-dot"></span>
+          <strong>Ubicación exacta:</strong>
+          dirección completa, punto de encuentro y referencias visibles.
+        </li>
+
+        <li>
+          <span class="rec-dot"></span>
+          <strong>Horario y objetivo:</strong>
+          duración estimada, tipo de actividad y nivel de exposición.
+        </li>
+
+        <li>
+          <span class="rec-dot"></span>
+          <strong>Vehículos y acompañantes:</strong>
+          placas, características y número de personas.
+        </li>
+
+        <li>
+          <span class="rec-dot"></span>
+          <strong>Contacto de contingencia:</strong>
+          persona responsable ante emergencias o cambios.
+        </li>
+      </ul>
+    </details>
+
+  </div>
+</section>
+
+  <!-- Formulario -->
+  <section id="formulario" class="form-section">
+    <div id="formNotice" class="form-notice hidden" role="alert"></div>
+
+    <header class="form-header">
+      <h2 id="formTitulo">Registrar solicitud</h2>
+      <p class="form-intro">
+        Completa la información para evaluar el servicio y asignar el equipo adecuado.
+      </p>
+    </header>
+
+    <section class="form-wrapper">
+    <form
+      id="solicitudForm"
+      action="https://formspree.io/f/mrbnkypq"
+      method="POST"
+      autocomplete="on"
+      novalidate
+    >
+
+      <fieldset class="form-block step">
+        <legend>Datos del solicitante</legend>
+
+        <div class="row">
+          <div class="field">
+            <label for="nombre">
+              Nombres <span class="req">*</span>
+            </label>
+            <input
+              type="text"
+              id="nombre"
+              name="nombres"
+              placeholder="Ej: Ana María"
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s\-]+"
+              required
+            >
+            <div class="error">Solo letras y espacios.</div>
+          </div>
+
+          <div class="field">
+            <label for="apellidos">
+              Apellidos <span class="req">*</span>
+            </label>
+            <input
+              type="text"
+              id="apellidos"
+              name="apellidos"
+              placeholder="Ej: Martínez Gómez"
+              pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ\s\-]+"
+              required
+            >
+            <div class="error">Solo letras y espacios.</div>
+          </div>
+
+          <div class="field">
+            <label for="telefono">
+              Teléfono de contacto <span class="req">*</span>
+            </label>
+            <input
+              type="tel"
+              id="telefono"
+              name="telefono"
+              placeholder="+57 300 000 0000"
+              pattern="\+?[0-9\s]{7,15}"
+              inputmode="numeric"
+              autocomplete="tel"
+              required
+            >
+          </div>
+
+          <div class="field">
+            <label for="email">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="correo@ejemplo.com"
+              required
+            >
+          </div>
+        </div>
+      </fieldset>
+<!-- Detalles -->
+<fieldset class="form-block step">
+  <legend>Detalles de la solicitud</legend>
+
+  <div class="section-info">
+    <p><strong>Definición del nivel de urgencia</strong></p>
+    <ul>
+      <li>
+        <span>Inmediata:</span>
+        Servicio requerido en un plazo menor a <strong>2 horas</strong>.
+      </li>
+      <li>
+        <span>Alta:</span>
+        Atención necesaria entre <strong>2 y 24 horas</strong>.
+      </li>
+      <li>
+        <span>Media:</span>
+        Solicitud programada con un margen de <strong>24 a 72 horas</strong>.
+      </li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="field">
+      <label for="motivo">
+        Motivo <span class="req">*</span>
+      </label>
+      <input
+        type="text"
+        id="motivo"
+        name="motivo"
+        placeholder="Ej: Reunión, traslado, evento"
+        required
+      >
+    </div>
+
+    <div class="field">
+      <label for="ciudad">
+        Ubicación (Ciudad) <span class="req">*</span>
+      </label>
+      <select id="ciudad" name="ciudad" required>
+        <option value="">Selecciona una ciudad</option>
+        <option value="bogota">Bogotá</option>
+        <option value="medellin">Medellín</option>
+        <option value="cali">Cali</option>
+        <option value="barranquilla">Barranquilla</option>
+        <option value="cartagena">Cartagena</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field small">
+      <label for="dia">
+        Día del encuentro <span class="req">*</span>
+      </label>
+      <input type="date" id="dia" name="fecha" required>
+    </div>
+
+    <div class="field small">
+      <label for="hora">Hora estimada</label>
+      <input type="time" id="hora" name="hora" required>
+    </div>
+
+    <div class="field">
+      <label for="urgencia">Nivel de urgencia</label>
+      <select id="urgencia" name="urgencia" required>
+        <option value="low">Baja</option>
+        <option value="medium" selected>Media</option>
+        <option value="high">Alta</option>
+        <option value="immediate">Inmediata</option>
+      </select>
+    </div>
+  </div>
+</fieldset>
+
+<!-- Riesgos -->
+<fieldset class="form-block step">
+  <legend>Riesgos y logística</legend>
+
+  <div class="section-info warning">
+    <p><strong>Evaluación del nivel de amenaza</strong></p>
+    <ul>
+      <li><span>Baja:</span> Condiciones normales de seguridad.</li>
+      <li><span>Media:</span> Riesgos potenciales que requieren seguimiento.</li>
+      <li><span>Alta:</span> Amenazas confirmadas o antecedentes.</li>
+    </ul>
+  </div>
+
+  <div class="row">
+    <div class="field">
+      <label for="amenaza">Nivel de amenaza</label>
+      <select id="amenaza" name="amenaza" class="threat" required>
+        <option value="low">Baja</option>
+        <option value="medium" selected>Media</option>
+        <option value="high">Alta</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="armado">¿Posible presencia de armas?</label>
+      <select id="armado" name="armado" required>
+        <option value="no" selected>No</option>
+        <option value="unknown">Desconocido</option>
+        <option value="yes">Sí (posible)</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="personas">Personas a proteger</label>
+      <input
+        type="number"
+        id="personas"
+        name="personas"
+        min="1"
+        value="1"
+        required
+      >
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="field">
+      <label for="vehiculo">Tipo de vehículo</label>
+      <select id="vehiculo" name="vehiculo" required>
+        <option value="none">Sin vehículo</option>
+        <option value="sedan">Sedán</option>
+        <option value="suv">SUV</option>
+        <option value="armored_van">Camioneta blindada</option>
+        <option value="van">Van</option>
+        <option value="moto">Moto</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="preferenciaEscolta">Preferencia de escoltas</label>
+      <select id="preferenciaEscolta" name="preferenciaEscolta" required>
+        <option value="any">Indiferente</option>
+        <option value="male">Masculino</option>
+        <option value="female">Femenino</option>
+        <option value="mixed">Mixto</option>
+      </select>
+    </div>
+
+    <div class="field">
+      <label for="duracion">Duración (horas)</label>
+      <input
+        type="number"
+        id="duracion"
+        name="duracion"
+        min="1"
+        value="1"
+        required
+      >
+    </div>
+  </div>
+
+  <div class="row checklist-row">
+    <div class="field full">
+      <label>Escenarios relevantes</label>
+      <div class="checkboxes">
+        <label class="chk"><input type="checkbox" name="escenario[]" value="evento_publico"> Evento público</label>
+        <label class="chk"><input type="checkbox" name="escenario[]" value="traslado"> Traslado</label>
+        <label class="chk"><input type="checkbox" name="escenario[]" value="visita_residencial"> Visita residencial</label>
+        <label class="chk"><input type="checkbox" name="escenario[]" value="visita_comercial"> Visita comercial</label>
+        <label class="chk"><input type="checkbox" name="escenario[]" value="amenaza_directa"> Amenaza directa</label>
+      </div>
+    </div>
+  </div>
+</fieldset>
+
+<!-- Ubicación -->
+<fieldset class="form-block step">
+  <legend>Ubicación</legend>
+
+  <div class="section-info">
+    <p><strong>Información de ubicación</strong></p>
+    <p>
+      Indica la dirección exacta del punto de encuentro y una referencia clara
+      que facilite la llegada.
+    </p>
+  </div>
+
+  <div class="field">
+    <label for="ciudadMapa">
+      Ciudad <span class="req">*</span>
+    </label>
+    <select id="ciudadMapa" name="ciudadMapa" required>
+      <option value="">Selecciona una ciudad</option>
+      <option value="Bogotá, Colombia">Bogotá</option>
+      <option value="Medellín, Colombia">Medellín</option>
+      <option value="Cali, Colombia">Cali</option>
+      <option value="Barranquilla, Colombia">Barranquilla</option>
+      <option value="Cartagena, Colombia">Cartagena</option>
+    </select>
+  </div>
+
+  <input type="hidden" id="latitud" name="latitud">
+  <input type="hidden" id="longitud" name="longitud">
+
+  <div class="field">
+    <label for="direccion">
+      Dirección exacta <span class="req">*</span>
+    </label>
+    <input
+      type="text"
+      id="direccion"
+      name="direccion"
+      placeholder="Ej: Carrera 7 con Calle 72"
+      required
+    >
+  </div>
+
+  <div class="field">
+    <label for="referencia">Referencias visuales</label>
+    <textarea
+      id="referencia"
+      name="referencia"
+      rows="3"
+      placeholder="Ej: Casa azul, portón negro, frente a panadería"
+      required
+    ></textarea>
+  </div>
+
+  <button type="button" id="btnMapa" class="btn-map">
+    Mostrar mapa
+  </button>
+
+  <p id="mapError" class="map-error"></p>
+  <div id="suggestions" class="suggestions"></div>
+
+  <div class="map-container" id="mapContainer" aria-hidden="true">
+    <div id="map"></div>
+  </div>
+</fieldset>
+<!-- PRECIO ESTIMADO -->
+<section
+  class="price-box"
+  role="region"
+  aria-labelledby="priceTitle"
+>
+  <div class="price-info">
+    <strong id="priceTitle">Precio estimado</strong>
+
+    <div
+      id="priceDisplay"
+      class="price loading"
+      aria-live="polite"
+    >
+      Calculando…
+    </div>
+
+    <input
+      type="hidden"
+      name="precio_total"
+      id="precio_total"
+    >
+
+    <p class="price-note">
+      Este valor es un estimado y puede variar según
+      las condiciones reales del servicio.
+    </p>
+  </div>
+
+  <div class="price-actions">
+    <button
+      type="button"
+      id="recalcPrice"
+      class="btn ghost small"
+      aria-label="Recalcular precio estimado"
+    >
+      Recalcular
+    </button>
+
+    <button
+      type="button"
+      id="estimatePDF"
+      class="btn ghost small"
+      aria-label="Exportar precio estimado en PDF"
+    >
+      Exportar estimado
+    </button>
+  </div>
+</section>
+
+<!-- INCIDENTES -->
+<div class="field small highlight">
+  <label for="prevIncidentes">
+    ¿Ha habido incidentes previos?
+    <span class="hint">Información importante</span>
+  </label>
+
+  <select id="prevIncidentes" name="prevIncidentes">
+    <option value="no" selected>No</option>
+    <option value="yes">Sí (describir en notas)</option>
+  </select>
+</div>
+
+<!-- CONSENTIMIENTOS -->
+<fieldset class="form-block step">
+  <legend>Consentimientos obligatorios</legend>
+
+  <div class="row consent-row">
+    <div class="field small">
+      <label class="chk">
+        <input
+          type="checkbox"
+          name="consent_privacy"
+          required
+        >
+        Acepto el tratamiento de datos
+        <span class="req">*</span>
+      </label>
+    </div>
+
+    <div class="field small">
+      <label class="chk">
+        <input
+          type="checkbox"
+          name="consent_covid"
+        >
+        Solicito protocolo COVID-19
+      </label>
+    </div>
+  </div>
+</fieldset>
+
+<!-- ACCIONES -->
+<div class="form-actions">
+  <button
+    type="submit"
+    id="submitBtn"
+    class="btn primary"
+    disabled
+  >
+    Enviar solicitud
+  </button>
+
+  <button
+    type="reset"
+    id="resetBtn"
+    class="btn ghost"
+  >
+    Limpiar
+  </button>
+</div>
+
+</form>
+</section>
+<div
+  id="respuesta"
+  class="exito"
+  role="status"
+  aria-live="polite"
+></div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <h2>Preguntas frecuentes</h2>
+
+  <!-- CATEGORÍA -->
+  <details class="faq-group">
+    <summary>💰 Precios y cotización</summary>
+
+    <div class="faq-items">
+      <details>
+        <summary>¿Cómo se calcula el precio del servicio?</summary>
+        <p>
+          El precio se estima según duración, nivel de riesgo, número de escoltas,
+          ubicación y logística requerida.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿El precio estimado es definitivo?</summary>
+        <p>
+          No. Es una referencia inicial. El valor final puede variar tras la evaluación
+          operativa completa.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Se cobra por horas o por jornada?</summary>
+        <p>
+          Depende del tipo de servicio. Puede ser por horas, media jornada o jornada completa.
+        </p>
+      </details>
+    </div>
+  </details>
+
+  <!-- CATEGORÍA -->
+  <details class="faq-group">
+    <summary>🛡️ Servicio y personal</summary>
+
+    <div class="faq-items">
+      <details>
+        <summary>¿Los escoltas están certificados?</summary>
+        <p>
+          Sí. Todo el personal cuenta con formación profesional, certificaciones vigentes
+          y experiencia comprobada.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Puedo elegir el tipo de escolta?</summary>
+        <p>
+          Puedes indicar preferencias, sujetas a disponibilidad y evaluación del servicio.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿El servicio es discreto?</summary>
+        <p>
+          Siempre. La discreción es uno de nuestros principios operativos.
+        </p>
+      </details>
+    </div>
+  </details>
+
+  <!-- CATEGORÍA -->
+  <details class="faq-group">
+    <summary>📍 Operación y logística</summary>
+
+    <div class="faq-items">
+      <details>
+        <summary>¿En qué ciudades prestan servicio?</summary>
+        <p>
+          Operamos principalmente en las principales ciudades del país.
+          Otras ubicaciones están sujetas a evaluación.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Con cuánta anticipación debo solicitar el servicio?</summary>
+        <p>
+          Recomendamos mínimo 24–48 horas. En casos urgentes, evaluamos disponibilidad inmediata.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Qué información debo proporcionar?</summary>
+        <p>
+          Fecha, ciudad, duración, nivel de riesgo y punto de encuentro.
+          Más información permite una mejor planificación.
+        </p>
+      </details>
+    </div>
+  </details>
+
+  <!-- CATEGORÍA -->
+  <details class="faq-group">
+    <summary>⚖️ Legal y confidencialidad</summary>
+
+    <div class="faq-items">
+      <details>
+        <summary>¿La información suministrada es confidencial?</summary>
+        <p>
+          Sí. Toda la información se maneja bajo estrictos protocolos de confidencialidad.
+        </p>
+      </details>
+
+      <details>
+        <summary>¿Se firma contrato?</summary>
+        <p>
+          Dependiendo del servicio, se formaliza mediante contrato o acuerdo de prestación.
+        </p>
+      </details>
+    </div>
+  </details>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <div>
+      <strong>Proyecto</strong>
+      <p>Evaluación profesional de riesgos y servicios de protección.</p>
+      <p class="footer-tag">Decisiones informadas. Seguridad real.</p>
+    </div>
+
+    <div>
+      <strong>Servicios</strong>
+      <p>Evaluación de amenazas</p>
+      <p>Análisis de riesgos</p>
+      <p>Recomendaciones de seguridad</p>
+    </div>
+
+    <div>
+      <strong>Confianza</strong>
+      <p>Proceso claro y transparente</p>
+      <p>Datos tratados con responsabilidad</p>
+      <p>Resultados personalizados</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 — Proyecto académico · Uso educativo
+  </div>
+</footer>
+
+
+
+<!-- LIBRERÍAS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<!-- SCRIPTS PROPIOS -->
+<script src="mapa.js"></script>
+<script src="price.js"></script>
+<script src="pdf.js"></script>
+<script src="js/main.js"></script>
+<script src="form.js"></script>
+
+</body>
+</html>
